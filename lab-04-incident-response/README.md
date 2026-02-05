@@ -96,15 +96,17 @@ This experience reinforces the importance of structured documentation, evidence 
 ## Supporting Evidence
 
 ### Data Exfiltration Evidence
-![Spyware Evidence](screenshots/Lab 4-SS2.png)
+[![Spyware Evidence](screenshots/Lab%204-SS2.png)](screenshots/Lab%204-SS2.png)
+This image shows the email evidence of suspicious software download for the spyware from Marvin Jonson.
 
 ### PCAP File Analysis and Session Data
-![PCAP File](screenshots/Lab 4 SS5.png)
-![Session Data](screenshots/Lab 4 SS6.png)
-
+[![PCAP File](screenshots/Lab%204%20SS5.png)](screenshots/Lab%204%20SS5.png) 
+PCAP File Graph
+[![Session Data](screenshots/Lab%204%20SS6.png)](screenshots/Lab%204%20SS6.png)
+Session data from the timestamp of the suspicious request
 
 ### Incident Response Documentation and Notation
-![Incident Response Note](screenshots/Lab 4-SS3.png)
-![Incident Response Note](screenshots/Lab 4 SS4.png)
+[![Incident Response Note 1](screenshots/Lab%204-SS3.png)](screenshots/Lab%204-SS3.png) 
+[![Incident Response Note 2](screenshots/Lab%204%20SS4.png)](screenshots/Lab%204%20SS4.png)
 
 
