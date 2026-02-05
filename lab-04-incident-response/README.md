@@ -96,6 +96,15 @@ This experience reinforces the importance of structured documentation, evidence 
 ## Supporting Evidence
 
 ### Data Exfiltration Evidence
+![Spyware Evidence](screenshots/Lab 4-SS2.png)
 
+### PCAP File Analysis and Session Data
+![PCAP File](screenshots/Lab 4 SS5.png)
+![Session Data](screenshots/Lab 4 SS6.png)
+
+
+### Incident Response Documentation and Notation
+![Incident Response Note](screenshots/Lab 4-SS3.png)
+![Incident Response Note](screenshots/Lab 4 SS4.png)
 
 
