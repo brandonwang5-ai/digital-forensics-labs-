@@ -1,0 +1,172 @@
+# Lab 10: Memory Forensics and Malware Analysis
+
+## Overview
+
+Memory forensics is the analysis of a computer's **volatile memory**, which requires the system to be powered on, and can be lost when a system is shut down.
+This differs from non-volatile storage (disk drives) as **volatile memory** tends to contain transient but critical forensic artifacts such as running processes, open network connections, recently executed commands, encryption keys, and in-memory malware. 
+
+Memory forensics has become an essential capability for incident responders and forensic investigators because many modern attacks rely on malware that executes entirely in memory, which allows it to evade traditional disk-based security controls such as antivirus software and firewalls. 
+
+In this lab, volatile memory is captured through the utilization of several acquisition tools and analyzed to identify suspicious and malicious activity. And the evidence collected is correlated across tools in order to identify hidden processes, malware behavior, and network based indicators of compromise (IoC).
+
+---
+
+## Lab Objectives
+
+Upon completing this lab, I demonstrated the ability to:
+
+- **Create memory dumps** using DumpIt and FTK Imager  
+- **Analyze volatile memory** using Paraben’s E3 and Volatility  
+- **Identify suspicious and malicious processes** in memory  
+- **Detect hidden processes and abnormal behavior**  
+- **Use DensityScout** to identify packed or obfuscated executables  
+- **Correlate forensic evidence** across multiple tools to support investigative findings  
+
+---
+
+## Lab Environment
+
+**Virtual Machine**
+- vWorkstation (**Windows Server 2019**)
+
+---
+
+## Tools Used
+
+- **DumpIt**
+- **Paraben’s E3**
+- **FTK Imager**
+- **Volatility**
+- **DensityScout**
+
+---
+
+## Section 1: Memory Acquisition and Initial Analysis
+
+### Memory Capture Using DumpIt
+
+A full system memory dump was captured using **DumpIt** in order to preserve volatile system state for forensic analysis.
+
+---
+
+### Process Enumeration and Timeline Analysis
+
+The memory image was analyzed using **Paraben’s E3** to enumerate active processes and establish a timeline of execution.
+
+![Process List from Memory Dump](screenshots/)
+
+**Key Observations**
+- Identified both long-running and recently started processes  
+- Recorded the start times of the **oldest and newest processes** to support timeline reconstruction  
+
+---
+
+### Analysis of `conhost.exe`
+
+The `conhost.exe` process was examined to determine its role and legitimacy within the system.
+
+![conhost.exe Analysis](screenshots/)
+
+**Findings**
+- `conhost.exe` is a legitimate Windows **Console Host** process  
+- Used to facilitate interaction between command-line applications and the graphical user interface  
+
+---
+
+### Analysis of `hooker.exe`
+
+The `hooker.exe` process was identified as suspicious and analyzed in greater detail. Consisting of Process details, registry keys accessed, and files opened. 
+
+![Registry Keys Accessed by hooker.exe](screenshots/)
+
+**Findings**
+- Exhibited behavior inconsistent with normal system processes  
+- Accessed sensitive registry keys and files  
+- Indicators suggest malicious intent or unauthorized activity
+- hooker.exe appears to be associated with keylogging or input capturing software
+
+---
+
+## Section 2: Advanced Memory Analysis and Malware Detection
+
+### Memory Capture Using FTK Imager
+
+A secondary memory capture was performed using **FTK Imager** to validate findings and compare acquisition methods.
+
+![FTK Imager Memory Capture Success](screenshots/)
+
+---
+
+### DensityScout Analysis
+
+**DensityScout** was used to analyze suspicious executables for signs of packing or obfuscation.
+
+![DensityScout Results](screenshots/)
+
+**Findings**
+- Abnormal entropy levels indicated potential use of packing techniques commonly associated with malware
+
+---
+
+### Analysis of `rvlkl.exe`
+
+The `rvlkl.exe` process was identified and investigated for malicious characteristics.
+
+**Findings**
+- Process behavior was analyzed to determine purpose and legitimacy  
+- Assessed whether the process attempted to hide from standard enumeration tools
+
+---
+
+### Network Activity Analysis
+
+Volatility’s **netscan** module was used to identify network connections associated with suspicious processes.
+
+![Volatility Netscan Output](screenshots/)
+
+**Key Findings**
+- Reviewed network activity related to `hooker.exe` and `rvlkl.exe`  
+- Investigated traffic associated with **port 56610**  
+
+---
+
+## Section 3: Independent Investigation and Threat Hunting
+
+### Process Tree Analysis
+
+Volatility’s **pslist** output was used to analyze `FixtureComputer.exe` and its child processes.
+
+![pslist Output](screenshots/)
+
+---
+
+### YARA-Based Memory Scanning
+
+YARA rules were applied to the memory image to identify known malware patterns.
+
+![YARAScan Output](screenshots/)
+
+---
+
+### Privilege Comparison
+
+Process privileges were compared to identify signs of potential privilege escalation.
+
+![Privilege Comparison Output](screenshots/)
+
+---
+
+### External Network Connections
+
+Network activity involving the external IP address **205.134.253.10:4444** was investigated.
+
+**Findings**
+- Identified three processes communicating with the external address  
+- Determined the name and purpose of the associated software  
+
+## Summary and Key Takeaways
+
+This lab provided hands on experience in **memory forensics and malware analysis**, which demonstrates how volatile memory can reveal attacker activity not visible through disk-based analysis alone.
+This investigation emphasizes the importance of utilizing **multiple tools** to properly validate findings and correlate evidence across different processes, registry artifacts and network activity.
+
+The techniques utilized in this lab closely resemble real-world **incident response and forensic investigation workflows** used in enterprise environments. 
