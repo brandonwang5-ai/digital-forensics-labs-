@@ -53,7 +53,7 @@ A full system memory dump was captured using **DumpIt** in order to preserve vol
 
 The memory image was analyzed using **Paraben’s E3** to enumerate active processes and establish a timeline of execution.
 
-![Process List from Memory Dump](screenshots/)
+![Process List from Memory Dump](screenshots/Lab10-SS1.png)
 
 **Key Observations**
 - Identified both long-running and recently started processes  
@@ -65,8 +65,6 @@ The memory image was analyzed using **Paraben’s E3** to enumerate active proce
 
 The `conhost.exe` process was examined to determine its role and legitimacy within the system.
 
-![conhost.exe Analysis](screenshots/)
-
 **Findings**
 - `conhost.exe` is a legitimate Windows **Console Host** process  
 - Used to facilitate interaction between command-line applications and the graphical user interface  
@@ -77,7 +75,7 @@ The `conhost.exe` process was examined to determine its role and legitimacy with
 
 The `hooker.exe` process was identified as suspicious and analyzed in greater detail. Consisting of Process details, registry keys accessed, and files opened. 
 
-![Registry Keys Accessed by hooker.exe](screenshots/)
+![Registry Keys Accessed by hooker.exe](screenshots/Lab10-SS2.png)
 
 **Findings**
 - Exhibited behavior inconsistent with normal system processes  
@@ -93,7 +91,7 @@ The `hooker.exe` process was identified as suspicious and analyzed in greater de
 
 A secondary memory capture was performed using **FTK Imager** to validate findings and compare acquisition methods.
 
-![FTK Imager Memory Capture Success](screenshots/)
+![FTK Imager Memory Capture Success](screenshots/Lab10-SS3.png)
 
 ---
 
@@ -101,7 +99,7 @@ A secondary memory capture was performed using **FTK Imager** to validate findin
 
 **DensityScout** was used to analyze suspicious executables for signs of packing or obfuscation.
 
-![DensityScout Results](screenshots/)
+![DensityScout Results](screenshots/Lab10-SS4.png)
 
 **Findings**
 - Abnormal entropy levels indicated potential use of packing techniques commonly associated with malware
@@ -122,8 +120,6 @@ The `rvlkl.exe` process was identified and investigated for malicious characteri
 
 Volatility’s **netscan** module was used to identify network connections associated with suspicious processes.
 
-![Volatility Netscan Output](screenshots/)
-
 **Key Findings**
 - Reviewed network activity related to `hooker.exe` and `rvlkl.exe`  
 - Investigated traffic associated with **port 56610**  
@@ -136,7 +132,7 @@ Volatility’s **netscan** module was used to identify network connections assoc
 
 Volatility’s **pslist** output was used to analyze `FixtureComputer.exe` and its child processes.
 
-![pslist Output](screenshots/)
+![pslist Output](screenshots/Lab10-SS5.png)
 
 ---
 
@@ -144,7 +140,7 @@ Volatility’s **pslist** output was used to analyze `FixtureComputer.exe` and i
 
 YARA rules were applied to the memory image to identify known malware patterns.
 
-![YARAScan Output](screenshots/)
+![YARAScan Output](screenshots/Lab10-SS6.png)
 
 ---
 
@@ -152,7 +148,7 @@ YARA rules were applied to the memory image to identify known malware patterns.
 
 Process privileges were compared to identify signs of potential privilege escalation.
 
-![Privilege Comparison Output](screenshots/)
+![Privilege Comparison Output](screenshots/Lab10-SS7.png)
 
 ---
 
