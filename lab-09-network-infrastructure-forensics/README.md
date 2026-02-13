@@ -62,7 +62,7 @@ Network traffic was captured and analyzed using **Wireshark**, focusing on filte
 
 Captured packets were sorted by timestamp to establish communication order.
 
-![Timestamp-Sorted Traffic]()
+![Timestamp-Sorted Traffic](screenshots/Lab-9-SS1.png)
 
 ---
 
@@ -70,7 +70,7 @@ Captured packets were sorted by timestamp to establish communication order.
 
 Traffic was filtered by specific IP addresses to isolate communication between targeted hosts.
 
-![IP-Filtered Traffic]()
+![IP-Filtered Traffic](screenshots/Lab-9-SS2.png)
 
 ---
 
@@ -78,7 +78,7 @@ Traffic was filtered by specific IP addresses to isolate communication between t
 
 Port-based filtering was applied to identify service-specific traffic.
 
-![Port-Filtered Traffic]()
+![Port-Filtered Traffic](screenshots/Lab-9-SS3.png)
 
 ---
 
@@ -86,7 +86,7 @@ Port-based filtering was applied to identify service-specific traffic.
 
 Packets containing the **TCP Push (PSH) flag** were filtered to identify actively transmitted data.
 
-![TCP Push Flag Filter]()
+![TCP Push Flag Filter](screenshots/Lab-9-SS4.png)
 
 ---
 
@@ -94,7 +94,7 @@ Packets containing the **TCP Push (PSH) flag** were filtered to identify activel
 
 HTTP protocol filters were applied to isolate web traffic.
 
-![HTTP-Filtered Traffic]()
+![HTTP-Filtered Traffic](screenshots/Lab-9-SS5.png)
 
 **Findings**
 - Identified request and response traffic  
@@ -110,25 +110,25 @@ Basic router commands were used to gather system and network configuration detai
 
 #### Router Interface Details
 
-![Router Interface Details]()
+![Router Interface Details](screenshots/Lab-9-SS6.png)
 
 ---
 
 #### Router ARP Table
 
-![Router ARP Table]()
+![Router ARP Table](screenshots/Lab-9-SS7.png)
 
 ---
 
 #### IP Routing Table
 
-![IP Routing Table]()
+![IP Routing Table](screenshots/Lab-9-SS8.png)
 
 ---
 
 #### Currently Running Configuration
 
-![Running Configuration]()
+![Running Configuration](screenshots/Lab-9-SS9.png)
 
 **Significance**
 - Identified active interfaces and routing behavior  
@@ -143,7 +143,7 @@ Basic router commands were used to gather system and network configuration detai
 
 A successful transfer of the `secureTopo.png` file was identified and analyzed.
 
-![Successful File Transfer]()
+![Successful File Transfer](screenshots/Lab-9-SS10.png)
 
 ---
 
@@ -151,7 +151,7 @@ A successful transfer of the `secureTopo.png` file was identified and analyzed.
 
 The passive port specified by the FTP server was identified within the **Packet Details pane**.
 
-![Passive FTP Port]()
+![Passive FTP Port](screenshots/Lab-9-SS11.png)
 
 ---
 
@@ -165,7 +165,7 @@ The **Time To Live (TTL)** field was examined to assess packet routing behavior.
 
 The **Follow TCP Stream** feature was used to reconstruct communication sessions.
 
-![Follow TCP Stream Window]()
+![Follow TCP Stream Window](screenshots/Lab-9-SS12.png)
 
 ---
 
@@ -173,7 +173,7 @@ The **Follow TCP Stream** feature was used to reconstruct communication sessions
 
 The transferred PNG file was reconstructed from captured packets.
 
-![Reconstituted PNG File]()
+![Reconstituted PNG File](screenshots/Lab-9-SS13.png)
 
 **Significance**
 - Demonstrated file reconstruction from packet data  
@@ -185,7 +185,7 @@ The transferred PNG file was reconstructed from captured packets.
 
 Firewall logs were reviewed to identify blocked or suspicious traffic.
 
-![Firewall Log Entries]()
+![Firewall Log Entries](screenshots/Lab-9-SS14.png)
 
 ---
 
@@ -193,7 +193,7 @@ Firewall logs were reviewed to identify blocked or suspicious traffic.
 
 Firewall log entries were resolved to identify associated hostnames and services.
 
-![Resolved Firewall Log Entries]()
+![Resolved Firewall Log Entries](screenshots/Lab-9-SS15.png)
 
 **Findings**
 - Identified allowed and denied connections  
@@ -207,7 +207,7 @@ Firewall log entries were resolved to identify associated hostnames and services
 
 A non-RIP route was discovered on the target router and analyzed.
 
-![Non-RIP Route]()
+![Non-RIP Route](screenshots/Lab-9-SS16.png)
 
 **Findings**
 - Identified route not propagated via RIP  
@@ -228,3 +228,9 @@ An outgoing connection attempt was identified and documented.
 - Evaluated legitimacy of connection attempt  
 
 ---
+
+## Summary and Key Takeaways 
+
+By completing this lab, I was able to gain hands on experience in **network forensic investigation**. This consisted of live packet capture, protocol filtering, firewall log examination, and router analysis. 
+This investigation shows how attacker behavior can be revealed through network-level evidence, in which file transfers and abnormal communication patterns were the key points of traceable evidence. 
+The methods used in this lab reflect real-world workflows used in **Security Operations Centers (S)C), law enforcement investigations, and incident response teams**. This highlights the essential role of packet analysis in modern cybersecurity operations. 
