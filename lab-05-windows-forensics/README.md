@@ -45,7 +45,8 @@ Once completing this lab, I will have demonstrated the ability to:
 
 Task Manager was used to examine active processes and select one for further investigation.
 
-![Process Properties Window]()
+![Process Properties Window](screenshots/Lab-5-SS1.png)
+)
 
 **Key Observations**
 - Documented **Process ID (PID)**, memory usage, and executable path  
@@ -57,7 +58,7 @@ Task Manager was used to examine active processes and select one for further inv
 
 Resource Monitor was used to identify processes with active listening ports.
 
-![Listening Ports List]()
+![Listening Ports List](screenshots/Lab-5-SS2.png)
 
 **Findings**
 - Identified open ports and associated services  
@@ -69,9 +70,9 @@ Resource Monitor was used to identify processes with active listening ports.
 
 The `fsutil` utility was used to gather information about the **C: drive** and inspect the **Update Sequence Number (USN) Journal**.
 
-![C Drive Information]()
+![C Drive Information](screenshots/Lab-5-SS3.png)
 
-![USN Journal Information]()
+![USN Journal Information](screenshots/Lab-5-SS4.png)
 
 **Findings**
 - Confirmed NTFS configuration details  
@@ -83,7 +84,7 @@ The `fsutil` utility was used to gather information about the **C: drive** and i
 
 The Windows installation date was extracted and converted into a **human-readable format**.
 
-![Windows Installation Timestamp]()
+![Windows Installation Timestamp](screenshots/Lab-5-SS5.png)
 
 **Significance**
 - Assists with **timeline reconstruction**  
@@ -97,7 +98,7 @@ The Windows Registry was examined to identify configuration settings and user ac
 
 #### Default Network Interface
 
-![Default Network Interface Key]()
+![Default Network Interface Key](screenshots/Lab-5-SS6.png)
 
 **Significance**
 - Identifies active network configuration  
@@ -107,7 +108,7 @@ The Windows Registry was examined to identify configuration settings and user ac
 
 #### Winlogon Key Values
 
-![Winlogon Key Values]()
+![Winlogon Key Values](screenshots/Lab-5-SS7.png)
 
 **Significance**
 - Determines logon behavior and configured shell  
@@ -117,7 +118,7 @@ The Windows Registry was examined to identify configuration settings and user ac
 
 #### ShellBag Artifacts
 
-![ShellBag Key Values]()
+![ShellBag Key Values](screenshots/Lab-5-SS8.png)
 
 **Significance**
 - Reveals historical folder browsing activity  
@@ -127,7 +128,7 @@ The Windows Registry was examined to identify configuration settings and user ac
 
 #### RecentDocs Artifacts
 
-![RecentDocs Key Values]()
+![RecentDocs Key Values](screenshots/Lab-5-SS9.png)
 
 **Significance**
 - Identifies recently opened documents  
@@ -141,7 +142,7 @@ The Windows Registry was examined to identify configuration settings and user ac
 
 Files were sorted within Paraben’s E3 to identify potentially suspicious artifacts.
 
-![Sorted Files View]()
+![Sorted Files View](screenshots/Lab-5-SS10.png)
 
 ---
 
@@ -149,7 +150,7 @@ Files were sorted within Paraben’s E3 to identify potentially suspicious artif
 
 The file `777.jpg` was examined using **Document View**.
 
-![777.jpg Document View]()
+![777.jpg Document View](screenshots/Lab-5-SS11.png)
 
 **Findings**
 - Reviewed file metadata and content  
@@ -172,7 +173,7 @@ The link file `777.lnk` was analyzed to extract original file path and metadata.
 
 Installation files located in the **Downloads category** were examined for potentially suspicious applications.
 
-![Suspicious Installation Files]()
+![Suspicious Installation Files](screenshots/Lab-5-SS12.png)
 
 ---
 
@@ -180,7 +181,7 @@ Installation files located in the **Downloads category** were examined for poten
 
 The **Uninstall registry folder** was reviewed to identify installed applications, including **Speedify VPN**.
 
-![Speedify Uninstall Entry]()
+![Speedify Uninstall Entry](screenshots/Lab-5-SS13.png)
 
 **Significance**
 - VPN usage may indicate attempts to obscure IP address or network activity  
@@ -191,7 +192,7 @@ The **Uninstall registry folder** was reviewed to identify installed application
 
 The system’s user accounts were examined.
 
-![Users List]()
+![Users List](screenshots/Lab-5-SS14.png)
 
 **Findings**
 - Identified active and historical user accounts  
@@ -203,7 +204,7 @@ The system’s user accounts were examined.
 
 The **Run folder** associated with Beverly Gates was analyzed for startup persistence entries.
 
-![Beverly Gates Run Folder]()
+![Beverly Gates Run Folder](screenshots/Lab-5-SS15.png)
 
 **Significance**
 - Run keys may indicate persistence mechanisms  
@@ -227,7 +228,7 @@ Browser artifacts were examined to identify suspicious activity.
 
 A suspicious file discovered during analysis was examined for malicious indicators.
 
-![Suspicious File Contents]()
+![Suspicious File Contents](screenshots/Lab-5-SS16.png)
 
 **Findings**
 - Reviewed file contents and metadata  
@@ -239,7 +240,7 @@ A suspicious file discovered during analysis was examined for malicious indicato
 
 Registry artifacts associated with **Tor** and **Mozilla Firefox** were identified and analyzed.
 
-![Tor and Firefox Registry Key]()
+![Tor and Firefox Registry Key](screenshots/Lab-5-SS17.png)
 
 **Significance**
 - Tor artifacts may indicate anonymized browsing activity  
@@ -248,3 +249,9 @@ Registry artifacts associated with **Tor** and **Mozilla Firefox** were identifi
 ---
 
 ## Summary and Key Takeaways
+
+After working through this lab, it was truly amazing and such a great learning experience of how much useful evidence is actually embedded within normal activity on Windows. System components like the Registry, link files, and browser artifacts are proverbial treasure troves for historical data. 
+By examining ShellBag and RecentDocs entries revealed the practical aspects of how investigators can use artifacts to reconstruct user behavior, even without malicious files obviously present. I was also enlightened about how registry keys such as Winlogon and network interface entries give context about system configs and user logins, both of which serve critical components in a digital forensic investigation.
+Analyzing the drive image in E3 also connected the technical artifacts to reveal a broader narrative of events. Through sorting files, reviewing .Ink paths, and identifying suspicious browsing activity through analysis reveal how small traces across different system areas contribute to the larger picture and timeline. 
+Overall, this lab strengthened my understanding and proficiency on Windows-specific artifacts and how it supports forensic investigations. Especially when combining live system analysis with offline disk image examinations. 
+
