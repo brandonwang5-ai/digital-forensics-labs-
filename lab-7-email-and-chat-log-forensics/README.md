@@ -14,18 +14,18 @@ Using Paraben’s E3, I analyzed email headers, performed targeted searches, cat
 
 I began by analyzing the “Happy Reminder” email header in E3. Email headers contain routing metadata that reveals the sender’s IP address, mail servers involved, and timestamps.
 
-![Happy Reminder Email Header]()
+![Happy Reminder Email Header](screenshots/Lab-7-SS1.png)
 
 From the header, I identified the originating IP address and verified the transmission path. This demonstrates how header analysis can help validate message authenticity and trace message origin.
 
-![IP Address of Sender]()
+![IP Address](screenshots/Lab-7-SS2.png)
 ---
 
 ## Attachment Categorization Using Content Analysis
 
 Next, I used E3’s Content Analysis function to categorize email attachments by file type, including graphics.
 
-![Graphics Category in Content Analysis]()
+![Graphics Category in Content Analysis](screenshots/Lab-7-SS3.png)
 
 This functionality allows investigators to quickly identify potentially suspicious attachments without manually reviewing every email.
 
@@ -35,7 +35,7 @@ This functionality allows investigators to quickly identify potentially suspicio
 
 Using E3’s Advanced Search function, I applied keyword filters to locate communications referencing the “Big Boss.”
 
-![Email Referencing Big Boss]()
+![Email Referencing Big Boss](screenshots/Lab-7-SS4.png)
 
 This demonstrates how targeted searching improves investigative efficiency by narrowing down large datasets to relevant evidence.
 
@@ -47,7 +47,7 @@ This demonstrates how targeted searching improves investigative efficiency by na
 
 I examined the IntricateSolutions Slack workspace database to identify members, channels, and conversation content.
 
-![Slack Conversation Contents]()
+![Slack Conversation Contents](screenshots/Lab-7-SS5.png)
 
 Slack databases store structured communication artifacts, including timestamps, user IDs, and message content. This enables reconstruction of conversation timelines and participant involvement.
 
@@ -57,7 +57,7 @@ Slack databases store structured communication artifacts, including timestamps, 
 
 In Discord, I reviewed user relationships and conversation transcripts, including Beverly’s friend list and relevant message threads.
 
-![Discord Conversation Evidence]()
+![Discord Conversation Evidence](screenshots/Lab-7-SS6.png)
 
 This confirms that chat applications maintain local artifacts that can be analyzed for evidence of communication and collaboration.
 
@@ -71,7 +71,7 @@ I analyzed the “Well, Well, Well” email header and documented:
 - Mail server name: protonmail.com  
 - Mail server IP address: 185.70.40.132  
 
-![Well Well Well Email Header Analysis]()
+![Well Well Well Email Header Analysis](screenshots/Lab-7-SS7.png)
 
 This reinforces the importance of header analysis in tracing email transmission paths.
 
@@ -81,7 +81,7 @@ This reinforces the importance of header analysis in tracing email transmission 
 
 In the final section, I independently searched the database for additional evidence and identified a relevant email thread returned in the search results.
 
-![Email Thread Returned in Search Results]()
+![Email Thread Returned in Search Results](screenshots/Lab-7-SS8.png)
 
 This demonstrates the ability to conduct independent forensic analysis without guided instructions, mirroring real-world investigative scenarios.
 
